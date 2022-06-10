@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  discord-bot
+
+  SAM Template for discord-bot
+
+Globals:
+  Function:
+    Timeout: 3
+
+Resources:
+  DiscordBotApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Test
+
+  ListenFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers/
+      Handler: app.interaction_handler
+      Runtime: python3.8
+      Architectures:
+        - x86_64
+      Events:
+        Ping:
+          Type: Api
+          Properties:
+            RestApiId: !Ref DiscordBotApi
+            Path: /interactions
+            Method: POST
+
+Outputs:
+  DiscordBotApi:
+    Description: "Testing Discord Bot Serverless"
+    Value: !Sub "https://${DiscordBotApi}.execute-api.${AWS::Region}.amazonaws.com/Test/interactions"
