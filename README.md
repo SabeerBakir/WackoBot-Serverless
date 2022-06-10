@@ -1,6 +1,9 @@
 # WackoBot-Serverless
 Round 2 of making a Discord Bot, this time it's ✨ serverless ✨.
 
+## Architecture
+![Wackobot-Serverless drawio(2)](https://user-images.githubusercontent.com/26003209/173098028-c697051c-2acb-4d7d-a3ad-be34718a4a83.svg)
+
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
 - discord-bot/ - Code for the application's Lambda function along with the handlers, tests and sample events.
@@ -10,7 +13,7 @@ This project contains source code and supporting files for a serverless applicat
 
 The application uses several AWS resources, including Lambda functions and an API Gateway API. These resources are defined in the `template.yaml` file in this project. You can update the template to add AWS resources through the same deployment process that updates your application code.
 
-## Deploy the sample application
+## Deploy the application
 
 The Serverless Application Model Command Line Interface (SAM CLI) is an extension of the AWS CLI that adds functionality for building and testing Lambda applications. It uses Docker to run your functions in an Amazon Linux environment that matches Lambda. It can also emulate your application's build environment and API.
 
