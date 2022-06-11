@@ -20,6 +20,8 @@ To use the SAM CLI, you need the following tools.
 * [Python 3 installed](https://www.python.org/downloads/)
 * Docker - [Install Docker community edition](https://hub.docker.com/search/?type=edition&offering=community)
 
+You will need to supply your own Bot tokens, client IDs, etc. in an `env.json` file. You can see the `sample_env.json` to see the required information.
+
 To build and deploy your application for the first time, run the following in your shell:
 
 ```bash
@@ -59,6 +61,8 @@ You can find more information and examples about filtering Lambda function logs 
 ## Tests
 
 Tests are defined in the `tests` folder in this project. Use PIP to install the test dependencies and run tests.
+
+You will need to gather event data for your own application for the necessary tests. I have included a `sample_event.json` so that you can see the structure. I haven't included my own events as they do contain signed requests to my own API 😥.
 
 ```bash
 discord-bot$ pip install -r tests/requirements.txt --user

@@ -1,0 +1,113 @@
+{
+  "resource": "",
+  "path": "",
+  "httpMethod": "",
+  "headers": {
+    "CloudFront-Forwarded-Proto": "",
+    "CloudFront-Is-Desktop-Viewer": "",
+    "CloudFront-Is-Mobile-Viewer": "",
+    "CloudFront-Is-SmartTV-Viewer": "",
+    "CloudFront-Is-Tablet-Viewer": "",
+    "CloudFront-Viewer-Country": "",
+    "content-type": "",
+    "Host": "",
+    "User-Agent": "",
+    "Via": "",
+    "X-Amz-Cf-Id": "",
+    "X-Amzn-Trace-Id": "",
+    "X-Forwarded-For": "",
+    "X-Forwarded-Port": "",
+    "X-Forwarded-Proto": "",
+    "x-signature-ed25519": "",
+    "x-signature-timestamp": ""
+  },
+  "multiValueHeaders": {
+    "CloudFront-Forwarded-Proto": [
+      ""
+    ],
+    "CloudFront-Is-Desktop-Viewer": [
+      ""
+    ],
+    "CloudFront-Is-Mobile-Viewer": [
+      ""
+    ],
+    "CloudFront-Is-SmartTV-Viewer": [
+      ""
+    ],
+    "CloudFront-Is-Tablet-Viewer": [
+      ""
+    ],
+    "CloudFront-Viewer-Country": [
+      ""
+    ],
+    "content-type": [
+      ""
+    ],
+    "Host": [
+      ""
+    ],
+    "User-Agent": [
+      ""
+    ],
+    "Via": [
+      ""
+    ],
+    "X-Amz-Cf-Id": [
+      ""
+    ],
+    "X-Amzn-Trace-Id": [
+      ""
+    ],
+    "X-Forwarded-For": [
+      ""
+    ],
+    "X-Forwarded-Port": [
+      ""
+    ],
+    "X-Forwarded-Proto": [
+      ""
+    ],
+    "x-signature-ed25519": [
+      ""
+    ],
+    "x-signature-timestamp": [
+      ""
+    ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "",
+    "resourcePath": "",
+    "httpMethod": "",
+    "extendedRequestId": "",
+    "requestTime": "",
+    "path": "",
+    "accountId": "",
+    "protocol": "",
+    "stage": "",
+    "domainPrefix": "",
+    "requestTimeEpoch": 1234567891011,
+    "requestId": "",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "",
+      "user": null
+    },
+    "domainName": "",
+    "apiId": ""
+  },
+  "body": "",
+  "isBase64Encoded": false
+}

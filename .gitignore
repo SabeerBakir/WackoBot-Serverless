@@ -460,4 +460,5 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/osx,linux,python,windows,pycharm,visualstudiocode,sam
 
 # Discord bots events folder as these contain request signature
-discord-bot/events/
+discord-bot/events/*.json
+!discord-bot/events/sample_event.json
