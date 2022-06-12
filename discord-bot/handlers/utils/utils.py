@@ -57,7 +57,7 @@ class InteractionResponseFlags(IntEnum):
 
 # Client to make requests to Discord API easier
 class DiscordClient:
-    root_api_url: str = 'https://discord.com/api/v9/'
+    root_api_url: str = 'https://discord.com/api/v10/'
     token: str
     app_id: str
     guild_id: str
@@ -101,7 +101,20 @@ class DiscordClient:
 
 
     # Checks for a command and installs if it is not present
-    def has_guild_command(self, command: dict):
+    def has_guild_command(self, command: dict) -> bool:
+        """Check if a Guild Command is installed
+
+        Args:
+            command (dict): Command Manifest
+
+        Raises:
+            e: Any Exception
+
+        Returns:
+            bool: True if installed, False if not
+        """
+
+
         # API endpoint to get and post guild commands
         endpoint = f'applications/{self.app_id}/guilds/{self.guild_id}/commands'
 
@@ -114,12 +127,10 @@ class DiscordClient:
 
                 # This is just matching on the name, so it's not good for updates
                 # TODO: Add version checking for each command name
-                if command['name'] not in installedNames:
-                    print(f'''Installing "{command['name']}"''')
-                    response = self.install_guild_command(command)
-                    return response
+                if command['name'] in installedNames:
+                    return True
                 else:
-                    print(f'''"{command['name']}" command already installed''')
+                    return False
                 
         except Exception as e:
             raise e
